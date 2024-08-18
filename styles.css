@@ -1,0 +1,393 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(https://assets.nflxext.com/ffe/siteui/vlv3/83e8c151-107d-4e8f-b95a-d2ba99d49bb9/7a0bd648-8238-4134-b486-e7ff5cbaa56e/US-en-20230213-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 10px 8%;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button {
+    border: 0;
+    outline: none;
+    background: #db0001;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.launguage-btn{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.launguage-btn-select{
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 20px 7 10px;
+    color: #fff;
+    appearance: none;
+}
+.launguage-btn img{
+    position: absolute; width: 14px ;left: 58; top: 12; pointer-events: none;
+}
+.launguage-btn-select option{
+    color: black;
+    font-size: 16px;
+}
+.header-content {
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 80px;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: 600px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.email-signup {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.email-signup input {
+    outline-offset: 2px;
+    border: 2px solid rgb(119, 117, 117);
+    border-radius: 5px;
+    padding: 15px 15px;
+    color: #fff;
+    flex: 1;
+    font-size: 17px;
+    background: transparent;
+    backdrop-filter: blur(2px);
+}
+
+.email-signup button {
+    background: #db0001;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 13px 30px;
+    border-radius: 5px;
+}
+
+/* -------------features---------------- */
+
+.features {
+    font-size: 22px;
+    padding: 50px 12%;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.text-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img {
+    width:90%
+}
+
+.img-col video{
+    width: 100%; 
+    align-items: start;
+}
+
+.features h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.features p {
+    font-size: 23px;
+    line-height: 35px;
+}
+
+hr {
+    height: 7px;
+    background-color: #232323;
+    border: none;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+/* -------------faq---------------- */
+
+.faq {
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.faq h2 {
+    font-size: 50px;
+    font-weight: 800px;
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500px;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.accordion .content {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="checkbox"]:checked+label+.content {
+    max-height: 600px;
+    padding: 20px 20px;
+}
+
+.accordion input[type="checkbox"]:checked+label::after {
+    transform: rotate(135deg);
+}
+
+.faq .email-signup {
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+/* -------------footer---------------- */
+
+.footer {
+    padding: 50px 15% 10px;
+    margin-top: 20px;
+    color: #949292;
+}
+
+.footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.footer .col a {
+    display: block;
+    font-size: 14px;
+    color: #949292;
+    margin-bottom: 10px;
+}
+
+.footer .row {
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.footer .launguage-btn {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.copyright-txt {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* IE 10+ */
+}
+
+
+
+
+/* -------------------------media-queries-for-small-screen----------------------- */
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 100px;
+    }
+
+    nav button {
+        padding: 5px 10px;
+    }
+
+    nav .launguage-btn {
+        padding: 4px 8px;
+    }
+
+    .header-content {
+        margin-top: 90px;
+    }
+
+    .header-content h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .header-content h3 {
+        font-size: 20px;
+    }
+
+    .header-content p {
+        font-size: 15px;
+    }
+
+    .email-signup {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .email-signup button {
+        font-size: 20px;
+        padding: 16px 2px;
+        width: 160px;
+        margin: auto;
+    }
+
+    .text-col,
+    .img-col {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .img-col img {
+        width: 100%;
+    }
+
+    .text-col h2 {
+        font-size: 32px;
+    }
+
+    .text-col p {
+        font-size: 18px;
+    }
+
+    .img-col {
+        margin-bottom: 60px;
+    }
+
+    .faq {
+        padding: 10px;
+    }
+
+    .faq h2 {
+        font-size: 38;
+    }
+
+    .footer,
+    .features {
+        padding: 20px;
+    }
+    .launguage-btn img{
+        position: absolute; width: 14px ;left: 64; top: 15; pointer-events: none;
+    }
+}
