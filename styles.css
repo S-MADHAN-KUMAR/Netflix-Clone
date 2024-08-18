@@ -13,7 +13,7 @@ body {
 
 .header {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-image: linear-gradient(rgb(0, 0, 0, 0.7), rgb(0, 0, 0, 0.7)), url(https://assets.nflxext.com/ffe/siteui/vlv3/83e8c151-107d-4e8f-b95a-d2ba99d49bb9/7a0bd648-8238-4134-b486-e7ff5cbaa56e/US-en-20230213-popsignuptwoweeks-perspective_alpha_website_large.jpg);
     background-position: center;
     background-size: cover;
@@ -37,7 +37,7 @@ nav button {
     border: 0;
     outline: none;
     background: #db0001;
-    color: #fff;
+    color: #ffffff;
     padding: 10px 20px;
     font-size: 12px;
     border-radius: 4px;
@@ -52,9 +52,10 @@ nav button {
 .launguage-btn-select{
     align-items: center;
     background: transparent;
-    border: 1px solid #fff;
+    border: 1px solid #817d7d;
     padding: 7px 20px 7 10px;
     color: #fff;
+    border-radius: 4px;
     appearance: none;
 }
 .launguage-btn img{
@@ -108,11 +109,11 @@ p {
     border: 2px solid rgb(119, 117, 117);
     border-radius: 5px;
     padding: 15px 15px;
-    color: #fff;
+    color: #ffffff;
     flex: 1;
     font-size: 17px;
     background: transparent;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
 }
 
 .email-signup button {
@@ -187,12 +188,13 @@ hr {
 }
 
 .faq h2 {
-    font-size: 50px;
+    margin-top: 45px;
+    font-size:50px;
     font-weight: 800px;
 }
 
 .accordion {
-    margin: 60px auto;
+    margin: 20px auto 40px auto;
     width: 100%;
     max-width: 750px;
 }
@@ -220,7 +222,6 @@ label::after {
     font-size: 34px;
     position: absolute;
     right: 20px;
-    transition: transform 0.5s;
 }
 
 input[type="checkbox"] {
@@ -310,21 +311,25 @@ body {
 
 /* -------------------------media-queries-for-small-screen----------------------- */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     .logo {
         width: 100px;
     }
 
     nav button {
-        padding: 5px 10px;
+        padding: 8px 16px;
+        font-size:15px;
+        font-weight: 500;
     }
 
     nav .launguage-btn {
         padding: 4px 8px;
     }
-
+    .header{
+        height: 81%;
+    }
     .header-content {
-        margin-top: 90px;
+        margin-top: 55px;
     }
 
     .header-content h1 {
@@ -337,12 +342,13 @@ body {
     }
 
     .header-content p {
-        font-size: 15px;
+        font-size: 18px;
+        margin: 0 90px 13 90px;
     }
 
     .email-signup {
         display: flex;
-        flex-direction: column;
+        margin: 0 70px;
         justify-content: center;
     }
 
@@ -350,15 +356,20 @@ body {
         font-size: 20px;
         padding: 16px 2px;
         width: 160px;
+        flex-basis: 1;
         margin: auto;
     }
-
+    .email-signup input{
+        flex-basis:1;
+    } 
     .text-col,
     .img-col {
         flex-basis: 100%;
         text-align: center;
     }
-
+    #row-1{
+        flex-direction:column-reverse;
+    }
     .img-col img {
         width: 100%;
     }
@@ -380,14 +391,23 @@ body {
     }
 
     .faq h2 {
-        font-size: 38;
+        font-size: 30;
     }
-
+    .faq-footer{
+        padding: 0 20px 0 20px;
+    }
     .footer,
     .features {
         padding: 20px;
     }
     .launguage-btn img{
         position: absolute; width: 14px ;left: 64; top: 15; pointer-events: none;
+    }
+}
+
+
+@media only screen and (max-width:600px){
+    .email-signup {
+        flex-direction: column;
     }
 }
